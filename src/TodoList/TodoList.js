@@ -1,9 +1,20 @@
 import React from 'react';
+import classes from './TodoList.module.css';
+import TodoItem from '../TodoItem/TodoItem';
 
 const TodoList = ({ todos }) => {
-  return (
+
+  const displayTodos = (
     <div>
-      Ovo je lista
+      {todos.map(todo => (
+        <TodoItem todo={todo} className={classes.todoItem} />
+      ))}
+    </div>
+  )
+  
+  return (
+    <div className={classes.todoContainer}>
+      {displayTodos}
     </div>
   )
 }
