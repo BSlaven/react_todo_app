@@ -1,0 +1,36 @@
+.form {
+  display: flex;
+  width: 90%;
+  max-width: 600px;
+  border: 1px solid cyan;
+  padding: 0.5rem;
+  margin: 2rem auto;
+}
+
+.todoLabel {
+  width: 100%;
+  display: flex; 
+  position: relative;
+}
+
+.todoInput {
+  flex-grow: 1;
+  padding: 0.5rem;
+  padding-left: 1rem;
+  font-size: 1.3rem;
+  border-radius: 200px;
+}
+
+.todoInput:focus {
+  outline: none;
+}
+
+.formBtn {
+  font-family: inherit;
+  background-color: #fff;
+  color: #0c0633;
+  cursor: pointer;
+  border: none;
+  position: absolute;
+  right: 0;
+}
