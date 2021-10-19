@@ -1,16 +1,18 @@
 .form {
+  background-color: #07041a;
   display: flex;
+  align-items: center;
   width: 90%;
   max-width: 600px;
-  border: 1px solid cyan;
-  padding: 0.5rem;
+  padding: 1rem;
   margin: 2rem auto;
+  position: relative;
+  border-radius: 4px;
 }
 
 .todoLabel {
   width: 100%;
-  display: flex; 
-  position: relative;
+  display: flex;
 }
 
 .todoInput {
@@ -18,19 +20,31 @@
   padding: 0.5rem;
   padding-left: 1rem;
   font-size: 1.3rem;
+  border: none;
   border-radius: 200px;
 }
 
 .todoInput:focus {
   outline: none;
+  border: none;
 }
 
 .formBtn {
   font-family: inherit;
-  background-color: #fff;
+  background-color: rgb(216, 216, 216);
   color: #0c0633;
   cursor: pointer;
   border: none;
+  border-radius: 500px;
   position: absolute;
-  right: 0;
+  right: 1.3rem;
+  padding: 0.5rem;
+  line-height: 1rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.formBtn:hover, .fromBtn:focus {
+  background-color: rgb(185, 185, 185);
+  
 }
