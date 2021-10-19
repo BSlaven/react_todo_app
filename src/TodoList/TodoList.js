@@ -7,7 +7,10 @@ const TodoList = ({ todos }) => {
   const displayTodos = (
     <div>
       {todos.map(todo => (
-        <TodoItem todo={todo} className={classes.todoItem} />
+        <TodoItem 
+          todo={todo}
+          key={todo.id}
+          className={classes.todoItem} />
       ))}
     </div>
   )

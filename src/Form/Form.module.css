@@ -42,9 +42,9 @@
   line-height: 1rem;
   text-transform: uppercase;
   font-weight: bold;
+  transition: all 150ms ease;
 }
 
 .formBtn:hover, .fromBtn:focus {
-  background-color: rgb(185, 185, 185);
-  
+  background-color: rgb(185, 185, 185); 
 }
