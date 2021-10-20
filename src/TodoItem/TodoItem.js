@@ -1,12 +1,19 @@
 import React from 'react';
 import classes from './TodoItem.module.css';
 
-const TodoItem = ({ todo }) => {
+const TodoItem = ({ todo, removeItem }) => {
+
+  const completeClickHandler = () => {
+    removeItem(todo.id)
+  }
+  
   return (
     <div className={classes.todoItem}>
       <p>{todo.title}</p>
       <div className={classes.controlsContainer}>
-        <button className={classes.completeBtn}>
+        <button 
+          onClick={completeClickHandler}
+          className={classes.completeBtn}>
           <i className="fas fa-check"></i>
         </button>
         <button className={classes.deleteBtn}>
