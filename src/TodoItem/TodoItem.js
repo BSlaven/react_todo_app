@@ -1,8 +1,9 @@
-import React from 'react'
+import React from 'react';
+import classes from './TodoItem.module.css';
 
 const TodoItem = ({ todo }) => {
   return (
-    <div>
+    <div className={classes.todoItem}>
       <p>{todo.title}</p>
     </div>
   )
