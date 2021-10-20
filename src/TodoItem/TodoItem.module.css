@@ -1,4 +1,33 @@
 .todoItem {
-  background-color: rgb(224, 224, 224);
+  background-color: #0b0530;
   border-radius: 10px;
+  padding: 0.3rem;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  text-align: start;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.todoItem:last-child {
+  margin-bottom: 0;
+}
+
+.completeBtn, .deleteBtn {
+  position: absolute;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  border: none;
+  background: #fff;
+  font-size: 1.2rem;
+  border-radius: 50%;
+}
+
+.completeBtn {
+  top: 0;
+}
+
+.deleteBtn {
+  bottom: 0;
 }
