@@ -1,10 +1,16 @@
 import React from 'react';
 import classes from './TodoItem.module.css';
 
-const TodoItem = ({ todo, removeItem }) => {
+const TodoItem = ({ todo }) => {
 
   const completeClickHandler = () => {
-    removeItem(todo.id)
+    console.log(todo.id);
+    // completeTodo(todo.id)
+  }
+
+  const removeClickHandler = () => {
+    console.log(todo.id);
+    // removeTodo(todo.id)
   }
   
   return (
@@ -16,7 +22,9 @@ const TodoItem = ({ todo, removeItem }) => {
           className={classes.completeBtn}>
           <i className="fas fa-check"></i>
         </button>
-        <button className={classes.deleteBtn}>
+        <button 
+          className={classes.deleteBtn} 
+          onClick={removeClickHandler}>
           <i className="fas fa-trash"></i>
         </button>
       </div>

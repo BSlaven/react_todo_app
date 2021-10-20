@@ -2,14 +2,13 @@ import React from 'react';
 import classes from './TodoList.module.css';
 import TodoItem from '../TodoItem/TodoItem';
 
-const TodoList = ({ todos, removeItem }) => {
+const TodoList = ({ todos }) => {
 
   const displayTodos = (
     <div>
       {todos.map(todo => (
         <TodoItem 
           todo={todo}
-          removeItem={removeItem}
           key={todo.id}
           className={classes.todoItem} />
       ))}
