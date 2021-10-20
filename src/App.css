@@ -3,3 +3,11 @@
   color: #fff;
   padding: 1rem;
 }
+
+.fa-trash {
+  color: red;
+}
+
+.fa-check {
+  color: teal;
+}

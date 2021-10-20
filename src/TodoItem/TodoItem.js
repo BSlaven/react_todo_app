@@ -5,10 +5,14 @@ const TodoItem = ({ todo }) => {
   return (
     <div className={classes.todoItem}>
       <p>{todo.title}</p>
-      {/* <div className="controlsContainer"> */}
-        <button className={classes.completeBtn}>+</button>
-        <button className={classes.deleteBtn}>/-</button>
-      {/* </div> */}
+      <div className={classes.controlsContainer}>
+        <button className={classes.completeBtn}>
+          <i className="fas fa-check"></i>
+        </button>
+        <button className={classes.deleteBtn}>
+          <i className="fas fa-trash"></i>
+        </button>
+      </div>
     </div>
   )
 }
