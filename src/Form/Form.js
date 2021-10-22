@@ -8,6 +8,14 @@ const Form = () => {
   // useEffect(() => {
   //   console.log(todoInputValue);
   // }, [todoInputValue])
+
+  const createTodoObject = title => {
+    return {
+      title: title,
+      id: Math.floor(Math.random() * 10000000),
+      completed: false
+    }
+  }
   
   const handleInputChange = e => {
     const enteredValue = e.target.value;
