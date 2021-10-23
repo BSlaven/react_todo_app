@@ -24,6 +24,8 @@ const Form = () => {
   
   const handleSubmit = e => {
     e.preventDefault();
+    localStorage.setItem('todos', JSON.stringify(todoInputValue));
+    setTodoInputValue('');
     console.log(`Form submitted with value: ${todoInputValue}`);
   }
   
