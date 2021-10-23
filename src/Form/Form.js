@@ -1,13 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import classes from './Form.module.css';
 
 const Form = () => {
 
   const [ todoInputValue, setTodoInputValue ] = useState('');
-
-  // useEffect(() => {
-  //   console.log(todoInputValue);
-  // }, [todoInputValue])
 
   const createTodoObject = title => {
     return {
@@ -21,12 +17,19 @@ const Form = () => {
     const enteredValue = e.target.value;
     setTodoInputValue(enteredValue);
   }
+
+  const fetchTodos = () => {
+    const myTodos = JSON.parse(localStorage.getItem('todos'));
+    return myTodos || [];
+  }
   
   const handleSubmit = e => {
     e.preventDefault();
-    localStorage.setItem('todos', JSON.stringify(todoInputValue));
+    const todos = fetchTodos();
+    const newTodo = createTodoObject(todoInputValue);
+    todos.push(newTodo);
+    localStorage.setItem('todos', JSON.stringify(todos));
     setTodoInputValue('');
-    console.log(`Form submitted with value: ${todoInputValue}`);
   }
   
   return (

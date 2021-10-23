@@ -1,8 +1,16 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import classes from './TodoList.module.css';
 import TodoItem from '../TodoItem/TodoItem';
 
 const TodoList = () => {
+
+  // const [ todos, setTodos ] = useState([]);
+
+  // useEffect(() => {
+  //   const todosFromStorage = localStorage.getItem(JSON.parse('todos'))
+  //   if(!todosFromStorage) return;
+  //   setTodos(todosFromStorage);
+  // }, []);
 
   const todos = [
     {
