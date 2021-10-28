@@ -3,26 +3,6 @@ import classes from './TodoList.module.css';
 import TodoItem from '../TodoItem/TodoItem';
 
 const TodoList = ({ todos }) => {
-
-  // const todos = [
-  //   {
-  //     title: 'poradi malo na toj aplikaciji',
-  //     id: 1234568791321,
-  //     completed: false
-  //   },
-  //   {
-  //     title: 'Sagledaj taj film konačno',
-  //     id: 79841313565,
-  //     completed: true
-  //   },
-  //   {
-  //     title: 'Odmori malo',
-  //     id: 96395214647962,
-  //     completed: false
-  //   },
-  // ]
-
-  console.log(todos);
   
   const displayTodos = (
     <div>

@@ -13,12 +13,6 @@ function App() {
     if(!todosFromStorage) return;
     setTodos(todosFromStorage);
   }, []);
-
-  const addNewTodo = todo => {
-    const myTodos = [ ...todos ];
-    myTodos.push(todo);
-    localStorage.setItem('todos', JSON.stringify(myTodos));
-  }
   
   return (
     <div className="App">
