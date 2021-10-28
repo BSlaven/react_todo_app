@@ -17,18 +17,10 @@ const Form = () => {
     const enteredValue = e.target.value;
     setTodoInputValue(enteredValue);
   }
-
-  const fetchTodos = () => {
-    const myTodos = JSON.parse(localStorage.getItem('todos'));
-    return myTodos || [];
-  }
   
   const handleSubmit = e => {
     e.preventDefault();
-    const todos = fetchTodos();
     const newTodo = createTodoObject(todoInputValue);
-    todos.push(newTodo);
-    localStorage.setItem('todos', JSON.stringify(todos));
     setTodoInputValue('');
   }
   

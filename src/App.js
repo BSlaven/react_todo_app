@@ -1,8 +1,8 @@
 import './App.css';
+import { useState, useEffect } from 'react';
 import Header from './Header/Header';
 import Form from './Form/Form';
 import TodoList from './TodoList/TodoList';
-import { useState, useEffect } from 'react';
 
 function App() {
 
@@ -13,6 +13,12 @@ function App() {
     if(!todosFromStorage) return;
     setTodos(todosFromStorage);
   }, []);
+
+  const addNewTodo = todo => {
+    const myTodos = [ ...todos ];
+    myTodos.push(todo);
+    localStorage.setItem('todos', JSON.stringify(myTodos));
+  }
   
   return (
     <div className="App">
