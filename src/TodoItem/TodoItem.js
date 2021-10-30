@@ -1,16 +1,22 @@
 import React from 'react';
 import classes from './TodoItem.module.css';
 
-const TodoItem = ({ todo }) => {
+const TodoItem = ({ todo, todos, alterTodos }) => {
 
   const completeClickHandler = () => {
-    console.log(todo.id);
-    // completeTodo(todo.id)
+    const todosCopy = [ ...todos ];
+    const selectedTodo = {...todosCopy.find(item => item.id === todo.id)};
+    const selectedIndex = todosCopy.findIndex(item => item.id === todo.id);
+    selectedTodo.completed = !selectedTodo.completed;
+    todosCopy.splice(selectedIndex, 1, selectedTodo);
+    localStorage.setItem('todos', JSON.stringify(todosCopy));
+    alterTodos();
   }
 
   const removeClickHandler = () => {
-    console.log(todo.id);
-    // removeTodo(todo.id)
+    const filteredTodos = todos.filter(item => item.id !== todo.id);
+    localStorage.setItem('todos', JSON.stringify(filteredTodos));
+    alterTodos();
   }
   
   return (

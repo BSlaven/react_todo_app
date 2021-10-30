@@ -24,7 +24,8 @@ function App() {
       <Form 
         todos={todos}
         fetchData={fetchDataFromStorage} />
-      <TodoList 
+      <TodoList
+        fetchTodos={fetchDataFromStorage}
         todos={todos} />
     </div>
   );
