@@ -20,10 +20,10 @@ function App() {
   
   return (
     <div className="App">
-      <Header />
       <Form 
         todos={todos}
         fetchData={fetchDataFromStorage} />
+      <Header />
       <TodoList
         fetchTodos={fetchDataFromStorage}
         todos={todos} />

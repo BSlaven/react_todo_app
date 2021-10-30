@@ -11,6 +11,12 @@
   align-items: center;
 }
 
+.todoItem p {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
 .todoItem.completedItem p {
   text-decoration: line-through;
 }
