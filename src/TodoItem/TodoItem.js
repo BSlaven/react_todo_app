@@ -18,9 +18,12 @@ const TodoItem = ({ todo, todos, alterTodos }) => {
     localStorage.setItem('todos', JSON.stringify(filteredTodos));
     alterTodos();
   }
+
+  const completedClass = todo.completed ? classes.completedItem : null;
   
   return (
-    <div className={classes.todoItem}>
+    <div 
+      className={`${classes.todoItem} ${completedClass}`}>
       <p>{todo.title}</p>
       <div className={classes.controlsContainer}>
         <button 
