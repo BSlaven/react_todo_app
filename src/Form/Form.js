@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import classes from './Form.module.css';
 
-const Form = () => {
+const Form = ({ todos, fetchData }) => {
 
   const [ todoInputValue, setTodoInputValue ] = useState('');
 
@@ -17,10 +17,18 @@ const Form = () => {
     const enteredValue = e.target.value;
     setTodoInputValue(enteredValue);
   }
+
+  const postDataToLocalStorage = () => {
+    const copyTodos = [ ...todos ];
+    const newTodo = createTodoObject(todoInputValue);
+    copyTodos.push(newTodo);
+    localStorage.setItem('todos', JSON.stringify(copyTodos));    
+  }
   
   const handleSubmit = e => {
     e.preventDefault();
-    const newTodo = createTodoObject(todoInputValue);
+    postDataToLocalStorage();
+    fetchData();
     setTodoInputValue('');
   }
   

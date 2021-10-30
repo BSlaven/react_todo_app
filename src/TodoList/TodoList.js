@@ -8,10 +8,10 @@ const TodoList = ({ todos }) => {
     <div>
       {todos.map(todo => (
         <TodoItem 
-          todo={todo}
-          key={todo.id}
-          className={classes.todoItem} />
-      ))}
+        todo={todo}
+        key={todo.id}
+        className={classes.todoItem} />
+        ))}
     </div>
   )
   
