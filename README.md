@@ -1,6 +1,6 @@
 # My main todo list app
 
-#### Live demo url: [https://stodo-list-app.netlify.app/]
+### Live demo url: https://stodo-list-app.netlify.app/
 
 ## State Management
 
