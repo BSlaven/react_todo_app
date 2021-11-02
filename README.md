@@ -1,5 +1,7 @@
 # My main todo list app
 
+#### Live demo url: [https://stodo-list-app.netlify.app/]
+
 ## State Management
 
 - Luckily this app is not complicated enough that the obvious prop drilling
