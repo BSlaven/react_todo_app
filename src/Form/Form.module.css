@@ -25,8 +25,8 @@
 }
 
 .todoInput:focus {
-  outline: none;
-  border: none;
+  /* outline: none;
+  border: none; */
 }
 
 .formBtn {
@@ -45,6 +45,6 @@
   transition: all 150ms ease;
 }
 
-.formBtn:hover, .fromBtn:focus {
+.formBtn:is(:focus, :hover) {
   background-color: rgb(185, 185, 185); 
 }
